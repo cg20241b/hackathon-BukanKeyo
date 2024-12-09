@@ -18,9 +18,9 @@ document.body.appendChild(renderer.domElement);
 // Load a font and create text meshes
 const loader = new FontLoader();
 loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', function (font) {
-    // Lime green color
+    // Cyan color
     const cyan = new THREE.Color(0x00FFFF);
-    // Complementary color (purple)
+    // Complementary color (red)
     const complementaryColor = new THREE.Color(0xFF0000);
 
     // Ambient intensity
@@ -168,7 +168,7 @@ loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json
         transparent: true
     });
 
-    const glowGeometry = new THREE.BoxGeometry(1, 1, 1);
+    const glowGeometry = new THREE.BoxGeometry(0.7, 0.7, 0.7);
     const glowCube = new THREE.Mesh(glowGeometry, glowMaterial);
     scene.add(glowCube);
 
