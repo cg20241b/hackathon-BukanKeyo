@@ -71,7 +71,7 @@ loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json
     // Create text geometry for 'o'
     const textGeometryO = new TextGeometry('o', {
         font: font,
-        size: 1,
+        size: 1.4,
         height: 0.2,
         curveSegments: 12,
         bevelEnabled: true,
@@ -80,9 +80,10 @@ loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json
         bevelOffset: 0,
         bevelSegments: 5
     });
-    const textMeshE = new THREE.Mesh(textGeometryO, textMaterialO);
-    textMeshE.position.x = -2; // Position on the left side
-    scene.add(textMeshE);
+    const textMeshO = new THREE.Mesh(textGeometryO, textMaterialO);
+    textMeshO.position.x = -2.3; // Position on the left side
+    textMeshO.position.y = -0.35;
+    scene.add(textMeshO);
 
     // Create text material for '8' with custom shading model
     const textMaterial8 = new THREE.ShaderMaterial({
@@ -129,7 +130,7 @@ loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json
     // Create text geometry for '8'
     const textGeometry8 = new TextGeometry('8', {
         font: font,
-        size: 1,
+        size: 1.4,
         height: 0.2,
         curveSegments: 12,
         bevelEnabled: true,
@@ -138,9 +139,10 @@ loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json
         bevelOffset: 0,
         bevelSegments: 5
     });
-    const textMesh4 = new THREE.Mesh(textGeometry8, textMaterial8);
-    textMesh4.position.x = 1.4; // Position on the right side
-    scene.add(textMesh4);
+    const textMesh8 = new THREE.Mesh(textGeometry8, textMaterial8);
+    textMesh8.position.x = 1.4; // Position on the right side
+    textMesh8.position.y = -0.45;
+    scene.add(textMesh8);
 
     // Create a glowing cube at the center
     const glowMaterial = new THREE.ShaderMaterial({
